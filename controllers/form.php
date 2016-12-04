@@ -40,10 +40,7 @@ class form extends Controller  {
             $imgNameCon = strip_tags($_POST['loginUser']) . '_' . $_FILES['picture']['name'];
 
 
-            $mail->SMTPDebug = 3;
-            $address = 'champ23@mail.ru';
-            $sub = 'Новый пользователь';
-            $body = 'Зарегистрирован новый пользователь на сайте!';
+//            $mail->SMTPDebug = 3;
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -53,11 +50,16 @@ class form extends Controller  {
             $mail->Port = 465;
 
             $mail->setFrom('senior.phpovich2016@yandex.ru');
-            $mail->addAddress($address, 'Петр');
+            $mail->addAddress('champ2013@yandex.ru', 'Петр');
 
-            $mail->Subject = $sub;
-            $mail->Body    = $body;
-            $mail->AltBody = $body;
+            $mail->Subject = 'Новый пользователь';
+            $mail->Body = 'Зарегистрирован новый пользователь на сайте!';
+            $mail->AltBody = 'Зарегистрирован новый пользователь на сайте!';
+
+            if(!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            }
 
 
             $insReg = $reg->registrationUser($usernameCon, $ageCon, $infoCon, $loginCon, $passCon, $imgNameCon);

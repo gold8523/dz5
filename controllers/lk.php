@@ -186,6 +186,12 @@ class lk extends Controller {
         }
     }
 
+    public function out() {
+
+        session_unset();
+        header('Location: ../');
+    }
+
 }
 
 

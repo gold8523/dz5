@@ -98,4 +98,8 @@
         <li><?php echo $item; ?></li>
         </ul><?php endforeach; ?>
 </div>
-<a href="../index.php">Вернуться на главную</a>
+<div>
+    <form action="lk/out" method="post">
+        <input type="submit" name="exit" value="Выйти на главную">
+    </form>
+</div>
