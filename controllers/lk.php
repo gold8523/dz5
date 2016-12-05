@@ -133,9 +133,9 @@ class lk extends Controller {
             $dir = dirname(__DIR__) . '/uploads';
             $dirSmall = dirname(__DIR__) . '/images';
             $ren = rename("$dir/$oldName" , "$dir/$newName" );
-            $renSmall = rename("$dirSmall/$oldName" , "$dir/$newName" );
-            if ($ren == true) {
-                header('Location: lk.php');
+            $renSmall = rename("$dirSmall/$oldName" , "$dirSmall/$newName" );
+            if ($renSmall == true) {
+                header('Location: ../lk');
             } else {
                 echo 'Что-то пошло не так!';
             }
@@ -153,7 +153,7 @@ class lk extends Controller {
             $del = unlink("$dir/$imgName");
             $delSmall = unlink("$dirSmall/$imgName");
             if ($del == true) {
-                header('Location: lk.php');
+                header('Location: ../lk');
             } else {
                 echo 'Что-то пошло не так!';
             }
