@@ -4,7 +4,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 //require dirname(__DIR__) . '/controller.php';
 require dirname(__DIR__) . '/models/model_login.php';
 
-class login extends Controller
+class login_controller extends Controller
 {
 
 
@@ -50,9 +50,10 @@ class login extends Controller
                 setcookie('auth', '1', time() + 1800, '/');
             }
 
-            if ($logAll[0]['login'] == strip_tags($_POST['log']) && $logAll[0]['pass'] == strip_tags($_POST['password'])){
-                $_SESSION['user_id'] = $logAll[0]['user_id'];
-                $_SESSION['login'] = $logAll[0]['login'];
+
+            if ($logAll[1] == strip_tags($_POST['log']) && $logAll[2] == strip_tags($_POST['password'])){
+                $_SESSION['user_id'] = $logAll[3];
+                $_SESSION['login'] = $logAll[1];
                 $_SESSION['auth'] = true;
                 $isAuth = $_SESSION['auth'];
                 header('HTTP/1.1 404 Not Found');

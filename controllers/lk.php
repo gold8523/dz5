@@ -79,7 +79,7 @@ class lk extends Controller {
 
 
         } else {
-            header("Location: ?url=login");
+            header("Location: ../login");
             exit();
         }
 
@@ -186,9 +186,8 @@ class lk extends Controller {
                     ->save("images/$imgNameCon", 100);
 
                 $add = $selUser->addImg($imgNameCon, $userId);
-                header('Location: .');
+                header('Location: ../lk');
             }
-
         }
     }
 
