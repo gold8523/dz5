@@ -87,17 +87,22 @@ class Model_Lk extends model {
     }
 
     public function addImg($imgNameCon, $userId) {
-        $sqlImages = 'insert into `images` (`img_name`, `user_id`) value (?, ?)';
-
-        $con = $this->connection();
-
-        $stmt = $con->prepare($sqlImages);
+//        $sqlImages = 'insert into `images` (`img_name`, `user_id`) value (?, ?)';
+//
+//        $con = $this->connection();
+//
+//        $stmt = $con->prepare($sqlImages);
 
         $imgName = $imgNameCon;
         $user_id = $userId;
 
-        $stmt->bind_param('si', $imgName, $user_id);
-        $stmt->execute();
+        $images = new Image;
+        $images->user_id = $user_id;
+        $images->img_name = $imgName;
+        $images->save();
+
+//        $stmt->bind_param('si', $imgName, $user_id);
+//        $stmt->execute();
     }
 
     public function renameImg ($imgName, $img_id) {
@@ -119,14 +124,16 @@ class Model_Lk extends model {
     }
 
     public function deleteImg ($imageId) {
-        $con = $this->connection();
-
-        $sqlImgDel = 'DELETE  FROM `images` WHERE `id` = ?';
-        $stmt = $con->prepare($sqlImgDel);
+//        $con = $this->connection();
+//
+//        $sqlImgDel = 'DELETE  FROM `images` WHERE `id` = ?';
+//        $stmt = $con->prepare($sqlImgDel);
 
         $imgId = $imageId;
+        $images = Image::find($imgId);
+        $images->delete();
 
-        $stmt->bind_param('i', $imgId);
-        $stmt->execute();
+//        $stmt->bind_param('i', $imgId);
+//        $stmt->execute();
     }
 }

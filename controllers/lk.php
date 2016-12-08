@@ -129,17 +129,17 @@ class lk extends Controller {
 
             $ren = $selUser->renameImg($imgName, $img_id);
 
-//            $oldName = $_POST['old'];
-//            $newName = $_POST['edit'];
-//            $dir = dirname(__DIR__) . '/uploads';
-//            $dirSmall = dirname(__DIR__) . '/images';
-//            $ren = rename("$dir/$oldName" , "$dir/$newName" );
-//            $renSmall = rename("$dirSmall/$oldName" , "$dirSmall/$newName" );
-//            if ($renSmall == true) {
-//                header('Location: ../lk');
-//            } else {
-//                echo 'Что-то пошло не так!';
-//            }
+            $oldName = $_POST['old'];
+            $newName = $_POST['edit'];
+            $dir = dirname(__DIR__) . '/uploads';
+            $dirSmall = dirname(__DIR__) . '/images';
+            $ren = rename("$dir/$oldName" , "$dir/$newName" );
+            $renSmall = rename("$dirSmall/$oldName" , "$dirSmall/$newName" );
+            if ($renSmall == true) {
+                header('Location: ../lk');
+            } else {
+                echo 'Что-то пошло не так!';
+            }
 
         }
         if (isset($_POST) && $_POST['action'] == 'Удалить') {

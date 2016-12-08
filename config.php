@@ -17,8 +17,14 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-class User extends Illuminate\Database\Eloquent\Model {}
+class User extends Illuminate\Database\Eloquent\Model {
+    public $timestamps = false;
+}
 
-class Login extends Illuminate\Database\Eloquent\Model {}
+class Login extends Illuminate\Database\Eloquent\Model {
+    public $timestamps = false;
+}
 
-class Image extends Illuminate\Database\Eloquent\Model {}
+class Image extends Illuminate\Database\Eloquent\Model {
+    public $timestamps = false;
+}
