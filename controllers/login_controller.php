@@ -50,6 +50,9 @@ class login_controller extends Controller
                 setcookie('auth', '1', time() + 1800, '/');
             }
 
+//            print_r($logAll[1]);
+//            print_r($logAll[2]);
+
 
             if ($logAll[1] == strip_tags($_POST['log']) && $logAll[2] == strip_tags($_POST['password'])){
                 $_SESSION['user_id'] = $logAll[3];
@@ -61,6 +64,7 @@ class login_controller extends Controller
                 exit();
             } else {
                 echo "Неверный логин или пароль!";
+                print_r($logAll);
             }
 
         } else {

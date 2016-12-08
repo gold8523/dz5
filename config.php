@@ -21,4 +21,4 @@ class User extends Illuminate\Database\Eloquent\Model {}
 
 class Login extends Illuminate\Database\Eloquent\Model {}
 
-class Images extends Illuminate\Database\Eloquent\Model {}
+class Image extends Illuminate\Database\Eloquent\Model {}

@@ -26,45 +26,46 @@ class lk extends Controller {
             foreach ($sel as $item) {
                 $resMod [] = $item;
             }
-            $images = $resMod[0];
-            $arrAge = $resMod[1];
-            $userName = $resMod[2];
-            $userAge = $resMod[3];
-            $userInfo = $resMod[4];
 
-            $userIm = 'images/' . $images[0];
+            foreach ($resMod[1] as $item) {
+                $arrAge [] = $item;
+            }
 
+            foreach ($resMod[0] as $item) {
+                $arrImg [] = $item;
+            }
+
+//
             $img = [];
             $id = [];
-            $len = count($images);
+            $len = count($arrImg);
             while ($len > -1) {
-                if (!empty($images[$len])) {
-                    $gt = gettype($images[$len]);
+                if (!empty($arrImg[$len])) {
+                    $gt = gettype($arrImg[$len]);
                     if ($gt == 'integer') {
-                        $id [] = $images[$len];
+                        $id [] = $arrImg[$len];
                     } else {
-                        $img [] = $images[$len];
+                        $img [] = $arrImg[$len];
                     }
                 }
                 $len--;
             }
 
-            $ageUsers = [];
             $len = count($arrAge);
             while ($len > 0) {
                 if (($arrAge[$len - 1]) > 18) {
-                    $ageUsers [] = $arrAge[$len - 2] . ' ' . $arrAge[$len - 1] . '- совершеннолетний';
+                    $ageUsers [] = $arrAge[$len - 2] . ' ' . $arrAge[$len - 1] . ' - совершеннолетний';
                 } else {
-                    $ageUsers [] = $arrAge[$len - 2] . ' ' . $arrAge[$len - 1] . '- не совершеннолетний';
+                    $ageUsers [] = $arrAge[$len - 2] . ' ' . $arrAge[$len - 1] . ' - не совершеннолетний';
                 }
                 $len = $len - 2;
             }
 
             $data[0] = $img;
             $data[1] = $ageUsers;
-            $data[2] = $userName;
-            $data[3] = $userAge;
-            $data[4] = $userInfo;
+            $data[2] = $resMod[2][0];
+            $data[3] = $resMod[2][1];
+            $data[4] = $resMod[2][2];
             $data[5] = $id;
 
 
@@ -118,8 +119,8 @@ class lk extends Controller {
 
     public function rename_image() {
         $selUser = new Model_Lk();
-        $userId = $_SESSION['user_id'];
-        $sel = $selUser->selectUser($userId);
+//        $userId = $_SESSION['user_id'];
+//        $sel = $selUser->selectUser($userId);
 
         if (isset($_POST['action']) && $_POST['action'] == 'Переименовать') {
 
@@ -128,17 +129,17 @@ class lk extends Controller {
 
             $ren = $selUser->renameImg($imgName, $img_id);
 
-            $oldName = $_POST['old'];
-            $newName = $_POST['edit'];
-            $dir = dirname(__DIR__) . '/uploads';
-            $dirSmall = dirname(__DIR__) . '/images';
-            $ren = rename("$dir/$oldName" , "$dir/$newName" );
-            $renSmall = rename("$dirSmall/$oldName" , "$dirSmall/$newName" );
-            if ($renSmall == true) {
-                header('Location: ../lk');
-            } else {
-                echo 'Что-то пошло не так!';
-            }
+//            $oldName = $_POST['old'];
+//            $newName = $_POST['edit'];
+//            $dir = dirname(__DIR__) . '/uploads';
+//            $dirSmall = dirname(__DIR__) . '/images';
+//            $ren = rename("$dir/$oldName" , "$dir/$newName" );
+//            $renSmall = rename("$dirSmall/$oldName" , "$dirSmall/$newName" );
+//            if ($renSmall == true) {
+//                header('Location: ../lk');
+//            } else {
+//                echo 'Что-то пошло не так!';
+//            }
 
         }
         if (isset($_POST) && $_POST['action'] == 'Удалить') {

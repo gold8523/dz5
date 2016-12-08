@@ -5,8 +5,8 @@
 <div>
     <img src="images/{{ data[0][0] }}" alt="Изображение">
     <ul>
-        <li>Имя:{{ data[2] }}</li>
-        <li>Возраст:{{ data[3] }}</li>
+        <li>Имя: {{ data[2] }}</li>
+        <li>Возраст: {{ data[3] }}</li>
     </ul>
 </div>
 <div>
@@ -44,10 +44,10 @@
         <li>
             <form action="lk/rename_image" method="post">
                 <label>
-                    {{ item }}
+                    {{  item }}
                     <input type="hidden" name="id" value="{{ data[5][loop.index0] }}">
-                    <input type="hidden" name="old" value="{{ item }}">
-                    <input type="text" name="edit" value="{{ item }}">
+                    <input type="hidden" name="old" value="{{  item }}">
+                    <input type="text" name="edit" value="{{  item }}">
                 </label>
                 <input type="submit" name="action" value="Переименовать">
                 <input type="submit" name="action" value="Удалить"><br>
