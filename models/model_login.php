@@ -11,12 +11,15 @@ class Model_Login extends model {
         $pass1 = $pass;
         $logins = Login::all()->where('pass', '=', $pass1);
 
-        foreach ($logins as $login){}
+        $loginElo;
 
-        $loginElo [] = $login->id;
-        $loginElo [] = $login->login;
-        $loginElo [] = $login->pass;
-        $loginElo [] = $login->user_id;
+        foreach ($logins as $login){
+            $loginElo [] = $login->id;
+            $loginElo [] = $login->login;
+            $loginElo [] = $login->pass;
+            $loginElo [] = $login->user_id;
+        }
+
 
 //        $connect = $this->connection();
 //
