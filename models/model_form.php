@@ -2,7 +2,7 @@
 //include dirname(__DIR__) . '\model.php';
 
 class Model_Form extends model {
-    public function registrationUser($usernameCon, $ageCon, $infoCon, $loginCon, $passCon, $imgNameCon) {
+    public function registrationUser($usernameCon, $ageCon, $infoCon, $ip, $loginCon, $passCon, $imgNameCon) {
 
 //        $sqlUsers = 'insert into `users` (`username`, `age`, `info`) value (?, ?, ?)';
 //        $sqlLogin = 'insert into `login` (`login`, `pass`, `user_id`) value (?, ?, ?)';
@@ -16,6 +16,7 @@ class Model_Form extends model {
             'username' => $usernameCon,
             'age' => $ageCon,
             'inform' => $infoCon,
+            'ip' => $ip
         ];
 
 
