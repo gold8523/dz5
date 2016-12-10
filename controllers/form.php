@@ -43,21 +43,19 @@ class form extends Controller  {
                 'ip' => $_SERVER['REMOTE_ADDR']
             ];
 
+            if($arrValid['age'] > 10 && $arrValid['age'] < 100) {
 
-            $gt = gettype(($_POST['age']));
-
-
-                if($arrValid['age'] > 5 && $arrValid['age'] < 100) {
-
-                    $validated = GUMP::is_valid($arrValid, [
-                        'name' => 'required|min_len,5|valid_name',
-                        'age' => 'required|numeric',
-                        'inform' => 'required|min_len,50',
-                        'login' => 'required|alpha_numeric|min_len,5',
-                        'pass' => 'required|min_len,8|alpha_dash',
-                        'ip' => 'required|valid_ip',
-                    ]);
-                }
+                $validated = GUMP::is_valid($arrValid, [
+                    'name' => 'required|min_len,5|valid_name',
+                    'age' => 'required|numeric',
+                    'inform' => 'required|min_len,50',
+                    'login' => 'required|alpha_numeric|min_len,5',
+                    'pass' => 'required|min_len,8|alpha_dash',
+                    'ip' => 'required|valid_ip',
+                ]);
+            } else {
+                echo "Возраст должен быть от "
+            }
 
             if ($validated === true) {
                 $usernameCon = $arrValid['name'];
