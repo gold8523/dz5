@@ -54,7 +54,7 @@ class form extends Controller  {
                     'ip' => 'required|valid_ip',
                 ]);
             } else {
-                echo "Возраст должен быть от "
+                echo "Возраст должен быть от ";
             }
 
             if ($validated === true) {
