@@ -46,7 +46,7 @@ class form extends Controller  {
             if($arrValid['age'] > 10 && $arrValid['age'] < 100) {
 
                 $validated = GUMP::is_valid($arrValid, [
-                    'name' => 'required|min_len,5|valid_name',
+                    'name' => 'required|min_len,5',
                     'age' => 'required|numeric',
                     'inform' => 'required|min_len,50',
                     'login' => 'required|alpha_numeric|min_len,5',
@@ -54,7 +54,7 @@ class form extends Controller  {
                     'ip' => 'required|valid_ip',
                 ]);
             } else {
-                echo "Возраст должен быть от ";
+                echo "Возраст должен быть от 10 до 100 лет";
             }
 
             if ($validated === true) {
@@ -111,6 +111,13 @@ class form extends Controller  {
 
                 }
                 header('Location: ../login_controller');
+
+            } else {
+                echo "Имя должно ссодержать не меньше 5 символов";
+                echo "Возраст долен быть указан цифрами";
+                echo "Информация должна ссодержать не меньше 50 символов";
+                echo "Логин должен ссодержать не меньше 5 символов";
+                echo "Пароль должен ссодержать не меньше 8 символов";
 
             }
         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7dd842d-3ca7-4e08-a523-84e57576913b" name="Default" comment="">
+    <list default="true" id="c7dd842d-3ca7-4e08-a523-84e57576913b" name="Default" comment="commit 12&#10;Вывод ошибок валидации">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/form.php" afterPath="$PROJECT_DIR$/controllers/form.php" />
     </list>
@@ -54,8 +54,8 @@
       <file leaf-file-name="form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            <state relative-caret-position="2006">
+              <caret line="118" column="68" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -170,20 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dz5">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,42 +188,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dz5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dz5" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dz5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dz5" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            <PATH_ELEMENT USER_OBJECT="dz5">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/domains/mvc/app/views/twig/portfolio_view.twig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -320,7 +292,9 @@
       <workItem from="1481111821619" duration="14310000" />
       <workItem from="1481195075508" duration="22512000" />
       <workItem from="1481272968238" duration="14947000" />
-      <workItem from="1481365866320" duration="7163000" />
+      <workItem from="1481365866320" duration="7180000" />
+      <workItem from="1481460685027" duration="511000" />
+      <workItem from="1481485506707" duration="560000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1&#10;ДЗ 5 исправленное">
       <created>1480864372378</created>
@@ -399,17 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1481377727880</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit 11&#10;Настроил валиданию">
+      <created>1481377761130</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1481377761130</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98142000" />
+    <option name="totallyTimeSpent" value="99230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -470,7 +451,9 @@
     <MESSAGE value="commit 8&#10;подключил Eloquent" />
     <MESSAGE value="commit 9&#10;Настроил валиданию" />
     <MESSAGE value="commit 10&#10;Настроил валиданию" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 10&#10;Настроил валиданию" />
+    <MESSAGE value="commit 11&#10;Настроил валиданию" />
+    <MESSAGE value="commit 12&#10;Вывод ошибок валидации" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 12&#10;Вывод ошибок валидации" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -479,7 +462,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/modLogin.php" />
     <entry file="file://$PROJECT_DIR$/controllers/mainControl.php" />
     <entry file="file://$USER_HOME$/Desktop/domains/dz/dz3/functions.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,7 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="11" selection-start-line="8" selection-start-column="10" selection-end-line="9" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,25 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="133" selection-end-column="26" />
-          <folding>
-            <element signature="e#756#758#0#PHP" expanded="false" />
-            <element signature="e#1028#1086#0#PHP" expanded="false" />
-            <element signature="e#1291#1350#0#PHP" expanded="false" />
-            <element signature="e#1556#1631#0#PHP" expanded="false" />
-            <element signature="e#1842#1865#0#PHP" expanded="false" />
-            <element signature="e#2173#2196#0#PHP" expanded="false" />
-            <element signature="e#2487#2570#0#PHP" expanded="false" />
-            <element signature="e#2994#3031#0#PHP" expanded="false" />
-            <marker date="1481227422018" expanded="true" signature="777:820" ph="SELECT `user... users" />
-            <marker date="1481227422018" expanded="true" signature="1046:1084" ph="SELECT `age`... users" />
-            <marker date="1481227422018" expanded="true" signature="1309:1348" ph="SELECT `info... users" />
-            <marker date="1481227422018" expanded="true" signature="1574:1629" ph="SELECT `img_... images" />
-            <marker date="1481227422018" expanded="true" signature="2037:2074" ph="SELECT `user... users" />
-            <marker date="1481227422018" expanded="true" signature="2511:2568" ph="insert into `images`... " />
-            <marker date="1481227422018" expanded="true" signature="3060:3110" ph="UPDATE `imag... " />
-            <marker date="1481227422018" expanded="true" signature="3318:3347" ph="..." />
-            <marker date="1481227422018" expanded="true" signature="3516:3552" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,9 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#410#451#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +739,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -795,7 +751,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -808,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +782,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -841,14 +794,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2761">
           <caret line="191" column="9" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="68" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="68" />
           <folding />
         </state>
       </provider>
