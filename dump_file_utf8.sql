@@ -28,7 +28,7 @@ CREATE TABLE `images` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,35 +37,35 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES (1,'fred_pes.jpg',1),(2,'peter_clash.jpg',2),(3,'peter_clash-2.jpg',2),(4,'frenk_pelikan.jpg',3),(5,'qwerty_ozero.jpg',4),(6,'qazxsw_more.jpg',5),(7,'qwsa_',6);
+INSERT INTO `images` VALUES (1,'fred_pes1.jpg',1),(3,'ted_clash.jpg',2),(4,'Denis_pelikan.jpg',3),(5,'fred_pelikan1.jpg',1),(6,'sidney_ozero.jpg',4);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `login`
+-- Table structure for table `logins`
 --
 
-DROP TABLE IF EXISTS `login`;
+DROP TABLE IF EXISTS `logins`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `login` (
+CREATE TABLE `logins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(100) NOT NULL,
   `pass` varchar(100) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `logins`
 --
 
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'fred','fred',1),(2,'peter','peter',2),(3,'frenk','frenk',3),(4,'qwerty','qwerty',4),(5,'qazxsw','qazxsw',5),(6,'qwsa','qwsa',6);
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+LOCK TABLES `logins` WRITE;
+/*!40000 ALTER TABLE `logins` DISABLE KEYS */;
+INSERT INTO `logins` VALUES (1,'fred','fred',1),(2,'ted','ted',2),(3,'Denis','denisqwe',3),(4,'sidney','sidney56',4);
+/*!40000 ALTER TABLE `logins` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -79,9 +79,10 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `age` int(3) DEFAULT NULL,
-  `info` text,
+  `inform` text,
+  `ip` varchar(21) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +91,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Fred',33,'Нет никого, кто любил бы боль саму по себе, кто искал бы её и кто хотел бы иметь её просто потому, что это боль..'),(2,'Petr',16,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat aliquam tellus, porta molestie justo aliquet varius. Aenean vitae felis eget risus faucibus laoreet. In blandit urna quis erat tempus. '),(3,'Frenk',44,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui eget lectus imperdiet lacinia. Praesent sit amet elit orci. Nunc dapibus, arcu vitae scelerisque.'),(4,'Den',26,'My name is Den'),(5,'Bob',26,'My name is Bob'),(6,'',0,'');
+INSERT INTO `users` VALUES (1,'Fred',34,'Info Fred',NULL),(2,'Ted',17,'Ted info',NULL),(3,'Denis',26,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet blandit blandit. Suspendisse tristique est vitae orci vehicula, eu ornare','127.0.0.1'),(4,'Sidney',23,'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz','127.0.0.1');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -103,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-04 22:58:34
+-- Dump completed on 2016-12-14 23:04:41
