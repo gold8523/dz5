@@ -98,7 +98,7 @@ class form extends Controller  {
                         echo 'Выберете изображение формата jpeg, png или gif.';
                     } else {
                         $dirUpload = dirname(__DIR__);
-                        $uploads_dir = $dirUpload . '\uploads';
+                        $uploads_dir = $dirUpload . '/uploads';
                         $tmp_name = $_FILES['picture']['tmp_name'];
                         move_uploaded_file($tmp_name, "$uploads_dir/$imgNameCon");
                     }
