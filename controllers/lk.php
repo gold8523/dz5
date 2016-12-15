@@ -13,19 +13,25 @@ class lk extends Controller {
 
         if (!empty($_COOKIE['auth'])) {
             $_SESSION['auth'] = true;
+            $userId = $_COOKIE['id'];
+        } else {
+            $userId = $_SESSION['user_id'];
         }
+
+
 
         $isAuth = !empty($_SESSION['auth']);
 
         if ($isAuth) {
-            $userId = $_SESSION['user_id'];
 
             $sel = $selUser->selectUser($userId);
+
 
             $resMod = [];
             foreach ($sel as $item) {
                 $resMod [] = $item;
             }
+
 
             foreach ($resMod[1] as $item) {
                 $arrAge [] = $item;
@@ -35,7 +41,9 @@ class lk extends Controller {
                 $arrImg [] = $item;
             }
 
-//
+
+
+
             $img = [];
             $id = [];
             $len = count($arrImg);
@@ -195,6 +203,7 @@ class lk extends Controller {
     public function out() {
 
         session_unset();
+//        setcookie('auth', '1', time() - 1800, '/');
         header('Location: ../');
     }
 

@@ -46,10 +46,6 @@ class login_controller extends Controller
             $pass = $_POST['password'];
             $logAll = $selLog->login_pass($pass);
 
-            if ($_POST['remem'] == 'on') {
-                setcookie('auth', '1', time() + 1800, '/');
-            }
-
 //            print_r($logAll[1]);
 //            print_r($logAll[2]);
 
@@ -59,12 +55,19 @@ class login_controller extends Controller
                 $_SESSION['login'] = $logAll[1];
                 $_SESSION['auth'] = true;
                 $isAuth = $_SESSION['auth'];
+
+                if ($_POST['remem'] == 'on') {
+                    $user_id = $_SESSION['user_id'];
+                    setcookie('auth', '1', time() + 1800, '/');
+                    setcookie('id', $user_id, time() + 1800, '/');
+                }
+//                print_r($_COOKIE['user_id']);
                 header('HTTP/1.1 404 Not Found');
                 header('Location: ../lk');
                 exit();
             } else {
                 echo "Неверный логин или пароль!";
-                print_r($logAll);
+//                print_r($logAll);
             }
 
         } else {
